@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+* {
+  font-family: "Roboto",Helvetica,Times,sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a, a:hover, a:visited{
+  text-decoration: none !important;
+}
+.container {
+  margin: 0 auto;
+}
+@media (min-width: 576px) {
+  .container{
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container{
+    width: 710px;
+  }
+}
+@media (min-width: 992px) {
+  .container{
+    width: 950px;
+  }
+}
+@media (min-width: 1200px) {
+  .container{
+    width: 1150px;
+  }
+}

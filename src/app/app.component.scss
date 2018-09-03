@@ -1,0 +1,27 @@
+.add {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+.widgets-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.widgets-wrapper > mat-card {
+  flex: 400px 0 1;
+}
+.imgs-container {
+  display: flex;
+  justify-content: space-around;
+}
+.img {
+  flex: 1px 1 1;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 33%;
+}
