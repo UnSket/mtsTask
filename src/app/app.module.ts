@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCardModule, MatIconModule} from '@angular/material';
+import {DataGeneratorService} from '../service/data-generator.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import {MatButtonModule, MatCardModule, MatIconModule} from '@angular/material';
     MatIconModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [DataGeneratorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

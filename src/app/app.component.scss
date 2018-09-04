@@ -10,18 +10,54 @@
   align-items: flex-start;
 }
 .widgets-wrapper > mat-card {
-  flex: 400px 0 1;
+  flex: 360px 0 1;
+  margin-bottom: 30px;
+}
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+h3 + p, .observe {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.75);
 }
 .imgs-container {
   display: flex;
   justify-content: space-around;
 }
 .img {
-  flex: 1px 1 1;
-  margin: 0 10px;
+  flex: 95px 0 0;
   position: relative;
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  padding-bottom: 33%;
+  height: 95px;
+}
+.observe {
+  display: flex;
+  align-items: center;
+}
+.observe .img {
+  flex: 20px 0 0;
+  height: 20px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+span.small {
+  font-size: 13px;
+  color: #969696;
+  margin-left: 5px;
+}
+.favorite {
+  margin-top: 10px;
+  background: linear-gradient(to right, #493bb4, #278de2);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+}
+.favorite.active {
+  background: white;
+  color: #278de2;
+  border: 1px solid #278de2;
 }

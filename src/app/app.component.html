@@ -1,16 +1,34 @@
 <div class="container">
   <h1 align="center">Генератор виджетов</h1>
-  <button mat-fab color="primary" class="add"><mat-icon>add</mat-icon></button>
+  <button mat-fab color="primary" class="add" (click)="addWidget()"><mat-icon>add</mat-icon></button>
   <div class="widgets-wrapper">
-    <mat-card>
+    <mat-card *ngFor="let widget of widgets">
       <div class="imgs-container">
-        <div class="img" [style.backgroundImage]="'url(https://image.freepik.com/free-icon/no-translate-detected_318-10744.jpg)'"></div>
-        <div class="img" [style.backgroundImage]="'url(https://www.picpng.com/images/large/avatar-boy-human-icon-male-man-transparent-42943)'"></div>
-        <div class="img" [style.backgroundImage]="'url(https://www.picpng.com/images/large/avatar-boy-human-icon-male-man-transparent-42943)'"></div>
+        <div class="img" [style.backgroundImage]="'url(' + widget.mainImgs[0] + ')'"></div>
+        <div class="img" [style.backgroundImage]="'url(' + widget.mainImgs[1] + ')'"></div>
+        <div class="img" [style.backgroundImage]="'url(' + widget.mainImgs[2] + ')'"></div>
       </div>
-      <h3>Заголовок</h3>
-      <p>Создатель: <a href="#">Имя создателя</a> </p>
-      <button></button>
+      <h3>{{widget.header}}</h3>
+      <p>Создатель: <a href="#">{{widget.creater}}</a> </p>
+      <div class="observe">
+        <span>Отслеживают:</span>
+        <div class="img" [style.backgroundImage]="'url(' + widget.observe.imgs[0] + ')'"></div>
+        <div class="img" [style.backgroundImage]="'url(' + widget.observe.imgs[1] + ')'"></div>
+        <div class="img" [style.backgroundImage]="'url(' + widget.observe.imgs[2] + ')'"></div>
+        <span class="small">
+          ...({{widget.observe.total}})
+        </span>
+      </div>
+      <div align="right">
+        <button *ngIf="widget.favorite" mat-raised-button class="favorite" (click)="widget.favorite = false">
+          <mat-icon>star</mat-icon>
+          Добавить в избранное
+        </button>
+        <button *ngIf="!widget.favorite" mat-raised-button class="favorite active" (click)="widget.favorite = true">
+          <mat-icon>check_circle_outline</mat-icon>
+          Добавить в избранное
+        </button>
+      </div>
     </mat-card>
   </div>
 </div>
